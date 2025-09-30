@@ -1,0 +1,13 @@
+jabon,
+tomates,
+pepinos,
+maiz,
+medicina,
+comino,
+shampoo,
+vinagre,
+miel,
+tocino,
+servilletas,
+helado,
+sopa
