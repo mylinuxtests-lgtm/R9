@@ -197,10 +197,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="photo-upload">
                         <input type="file" id="photo" name="photo" accept="image/*" required />
                         <small>Tamaño máximo: 5MB</small>
+                        <br/><br/>
                     </div>
                     <div class="photo-example">
                         <label for="example"> Ejemplo </label> <br />
-                        <img src="templates/images.jpg" alt="Ejemplo" width="150" height="200" />
+                        <img src="templates/images.jpg" alt="Ejemplo" width="100" height="150" />
                     </div>
                 </div>
             </div>
