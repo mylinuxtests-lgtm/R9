@@ -36,7 +36,7 @@ $permiso_exportar = ($id_usuario == 1 || $id_usuario == 2);
     <?php endif; ?>
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid overflow-auto rounded-lg shadow">
     <div id="toolbar">
       <button id="refreshBtn" class="refresh-btn">
         <i class="bi bi-arrow-clockwise"></i> Actualizar Tabla
@@ -49,13 +49,13 @@ $permiso_exportar = ($id_usuario == 1 || $id_usuario == 2);
            data-response-handler="responseHandler" data-sort-name="ID" data-sort-order="asc">
       <thead>
         <tr>
-          <th data-field="ID" data-sortable="true">ID</th>
-          <th data-field="Nombre" data-sortable="true">Nombre</th>
-          <th data-field="Fecha_Registro" data-sortable="true">Fecha Registro</th>
-          <th data-field="Fecha_Edicion" data-sortable="true">Fecha Edición</th>
-          <th data-field="ver" data-formatter="verFormatter" data-width="100" data-sortable="false">Ver</th>
-          <th data-field="editar" data-formatter="editarFormatter" data-width="100" data-sortable="false">Editar</th>
-          <th data-field="eliminar" data-formatter="eliminarFormatter" data-width="100" data-sortable="false">Eliminar</th>
+          <th class whitespace-nowrap data-field="ID" data-sortable="true">ID</th>
+          <th class whitespace-nowrap data-field="Nombre" data-sortable="true">Nombre</th>
+          <th class whitespace-nowrap data-field="Fecha_Registro" data-sortable="true">Fecha Registro</th>
+          <th class whitespace-nowrap data-field="Fecha_Edicion" data-sortable="true">Fecha Edición</th>
+          <th class whitespace-nowrap data-field="ver" data-formatter="verFormatter" data-width="100" data-sortable="false">Ver</th>
+          <th class whitespace-nowrap data-field="editar" data-formatter="editarFormatter" data-width="100" data-sortable="false">Editar</th>
+          <th class whitespace-nowrap data-field="eliminar" data-formatter="eliminarFormatter" data-width="100" data-sortable="false">Eliminar</th>
         </tr>
       </thead>
     </table>

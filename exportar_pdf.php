@@ -160,7 +160,7 @@ if (file_exists($student['Foto'])) {
     $pdf->Cell(0, 8, 'Fotografía:', 0, 1);
     
     try {
-        // Insertar imagen con manejo de errores
+        // Insertar imagen
         $pdf->Image($student['Foto'], 15, $pdf->GetY(), 40, 50, '', '', 'T', false, 300, '', false, false, 0, false, false, false);
         $pdf->SetY($pdf->GetY() + 55);
     } catch (Exception $e) {
@@ -222,7 +222,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'download') {
     // Forzar descarga del PDF
     $pdf->Output('estudiante_' . $student_id . '.pdf', 'D');
 } else {
-    // Mostrar en el navegador (previsualización)
+    // Previsualizar en el navegadore
     $pdf->Output('estudiante_' . $student_id . '.pdf', 'I');
 }
 
