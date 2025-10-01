@@ -72,7 +72,11 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 label {
@@ -105,7 +109,6 @@ label {
 input[type="submit"] {
     display: block;
     margin: 20px auto;
-    width: 40%;
     padding: 10px;
     background-color: #0e4e08;
     color: rgb(255, 255, 255);
@@ -115,6 +118,7 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    white-space: nowrap;
 }
 
 input[type="submit"]:hover {
@@ -124,7 +128,6 @@ input[type="submit"]:hover {
 input[type="reset"] {
     display: block;
     margin: 20px auto;
-    width: 40%;
     padding: 10px;
     background-color: #9c0303;
     color: rgb(255, 255, 255);
@@ -134,10 +137,36 @@ input[type="reset"] {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    white-space: nowrap;
 }
 
 input[type="reset"]:hover {
     background-color: #550202;
+}
+
+.form-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #0e4e08;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    min-width: 180px;
+}
+
+.form-btn[type="reset"] {
+    background-color: #9c0303;
+}
+
+.form-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 .error {
@@ -147,7 +176,7 @@ input[type="reset"]:hover {
 }
 
 .login-container {
-    width: 400px;
+    max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     background-color: white;
@@ -216,7 +245,7 @@ input[type="reset"]:hover {
 }
 
 .confirmation-container {
-    width: 500px;
+    max-width: 500px;
     margin: 50px auto;
     padding: 20px;
     background-color: white;
@@ -300,7 +329,7 @@ tr:nth-child(even) {
 }
 
 .user-header {
-    width: 600px;
+    max-width: 600px;
     margin: 20px auto;
     text-align: center;
     padding: 20px;
@@ -508,7 +537,10 @@ textarea {
 }
 
 .form-group {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 

@@ -131,7 +131,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="login.php?action=logout">Cerrar sesión</a>
         </div>
 
-        <form id="registroForm" action="Registro.php" method="post" enctype="multipart/form-data" autocomplete="off" class="needs-validation" novalidate>
+        <form id="registroForm" action="Registro.php" method="post" enctype="multipart/form-data" autocomplete="off"
+            class="needs-validation" novalidate>
             <div class="form-container">
                 <h2>Por favor, completa todos los campos</h2>
                 <h2><span class="error">* Campo Obligatorio</span></h2>
@@ -197,11 +198,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="photo-upload">
                         <input type="file" id="photo" name="photo" accept="image/*" required />
                         <small>Tamaño máximo: 5MB</small>
-                        <br/><br/>
-                    </div>
-                    <div class="photo-example">
-                        <label for="example"> Ejemplo </label> <br />
-                        <img src="templates/images.jpg" alt="Ejemplo" width="100" height="150" />
+
+                        <div class="photo-example">
+                            <label for="example"> Ejemplo </label> <br />
+                            <img src="templates/images.jpg" alt="Ejemplo" width="200" height="auto" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,71 +261,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <script>
         // Confirmación de envío
-document.getElementById('registroForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    if (!this.checkValidity()) {
-        this.classList.add('was-validated');
-        return;
-    }
+        document.getElementById('registroForm').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    Swal.fire({
-        title: '¿Confirmar registro?',
-        text: "¿Estás seguro de que deseas registrar este estudiante?",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sí, registrar',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Crear FormData para enviar archivos
-            const formData = new FormData(this);
-            
-            // Mostrar carga
+            if (!this.checkValidity()) {
+                this.classList.add('was-validated');
+                return;
+            }
+
             Swal.fire({
-                title: 'Registrando...',
-                text: 'Por favor espere',
-                allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                }
-            });
+                title: '¿Confirmar registro?',
+                text: "¿Estás seguro de que deseas registrar este estudiante?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, registrar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Crear FormData para enviar archivos
+                    const formData = new FormData(this);
 
-
-            fetch('procesar_registro.php', {
-            method: 'POST',
-            body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                Swal.close();
-                if (data.success) {
+                    // Mostrar carga
                     Swal.fire({
-                        title: '¡Éxito!',
-                        text: data.message,
-                        icon: 'success',
-                        confirmButtonText: 'Aceptar'
-                    }).then(() => {
-                        window.location.href = 'students.php';
+                        title: 'Registrando...',
+                        text: 'Por favor espere',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
                     });
-                } else {
-                    Swal.fire('Error', data.error, 'error');
+
+
+                    fetch('procesar_registro.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            Swal.close();
+                            if (data.success) {
+                                Swal.fire({
+                                    title: '¡Éxito!',
+                                    text: data.message,
+                                    icon: 'success',
+                                    confirmButtonText: 'Aceptar'
+                                }).then(() => {
+                                    window.location.href = 'students.php';
+                                });
+                            } else {
+                                Swal.fire('Error', data.error, 'error');
+                            }
+                        })
+                        .catch(error => {
+                            Swal.close();
+                            Swal.fire('Error', 'Error de conexión', 'error');
+                        });
                 }
-            })
-            .catch(error => {
-                Swal.close();
-                Swal.fire('Error', 'Error de conexión', 'error');
             });
-        }
-    });
-});
+        });
 
         // Restablecer formulario
-        document.getElementById('btnReset').addEventListener('click', function(e) {
+        document.getElementById('btnReset').addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             Swal.fire({
                 title: '¿Restablecer formulario?',
                 text: "Se perderán todos los datos ingresados",
