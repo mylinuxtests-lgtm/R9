@@ -139,122 +139,117 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-box">
-                <label for="nombre">Nombre completo: <span class="error">*</span><br /></label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required /><br /><br />
+                <label for="nombre">Nombre completo: <span class="error">*</span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required />
             </div>
 
             <div class="form-box">
-                <label for="sexo"> Sexo: <span class="error">*</span><br /></label>
-                <br /><br />
-
-                <label class="radio-label">
-                    <input type="radio" id="S1" name="sexo" value="Masculino" required />
-                    <span class="radio-text">Masculino</span> </label><br />
-
-                <label class="radio-label">
-                    <input type="radio" id="S2" name="sexo" value="Femenino" />
-                    <span class="radio-text">Femenino</span> </label><br />
-
-                <label class="radio-label">
-                    <input type="radio" id="S3" name="sexo" value="Otro" />
-                    <span class="radio-text">Otro</span> </label><br />
-
-                <label id="labelOtro" for="especifique" class="oculto">Especifique:</label>
-                <input type="text" class="oculto" id="especifique" name="especifique" /><br />
-            </div>
-
-            <div class="form-box">
-                <label for="age"> Edad: <span class="error">*</span><br /></label>
-                <input type="number" id="age" name="age" min="1" max="99" required /><br /><br />
-            </div>
-
-            <div class="form-box">
-                <label for="bday">Fecha de Nacimiento: <span class="error">*</span><br /></label>
-                <input type="date" id="bday" name="bday" required /><br /><br />
-            </div>
-
-            <div class="form-box">
-                <label for="country" class="col-sm-3 control-label">Pais de residencia: <span
-                        class="error">*</span><br /></label>
-                <div class="col-12">
-                    <select id="country" name="country" class="form-control" onchange="actualizarFormatoTelefono()">
-                        <option value="Alemania">Alemania</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Canada">Canada</option>
-                        <option value="China">China</option>
-                        <option value="Estados Unidos">Estados Unidos</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Japon">Japon</option>
-                        <option value="Mexico" selected>Mexico</option>
-                        <option value="Rusia">Rusia</option>
-                    </select>
+                <label for="sexo">Sexo: <span class="error">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="S1" name="sexo" value="Masculino" required />
+                        <span class="radio-text">Masculino</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="S2" name="sexo" value="Femenino" />
+                        <span class="radio-text">Femenino</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="S3" name="sexo" value="Otro" />
+                        <span class="radio-text">Otro</span>
+                    </label>
                 </div>
+                <label id="labelOtro" for="especifique" class="oculto">Especifique:</label>
+                <input type="text" class="oculto" id="especifique" name="especifique" />
             </div>
 
             <div class="form-box">
-                <label for="photo">Sube tu foto: <span class="error">*</span><br /></label>
+                <label for="age">Edad: <span class="error">*</span></label>
+                <input type="number" id="age" name="age" min="1" max="99" required />
+            </div>
+
+            <div class="form-box">
+                <label for="bday">Fecha de Nacimiento: <span class="error">*</span></label>
+                <input type="date" id="bday" name="bday" required />
+            </div>
+
+            <div class="form-box">
+                <label for="country">País de residencia: <span class="error">*</span></label>
+                <select id="country" name="country" class="form-control" onchange="actualizarFormatoTelefono()">
+                    <option value="Alemania">Alemania</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Japon">Japon</option>
+                    <option value="Mexico" selected>Mexico</option>
+                    <option value="Rusia">Rusia</option>
+                </select>
+            </div>
+
+            <div class="form-box">
+                <label for="photo">Sube tu foto: <span class="error">*</span></label>
                 <div class="photo-container">
-                    <div class="photo-upload">
+                                        <div class="photo-upload">
                         <input type="file" id="photo" name="photo" accept="image/*" required />
                         <small>Tamaño máximo: 5MB</small>
-
-                        <div class="photo-example">
-                            <label for="example"> Ejemplo </label> <br />
-                            <img src="templates/images.jpg" alt="Ejemplo" width="200" height="auto" />
-                        </div>
                     </div>
+                    <div class="photo-example">
+                        <label>Ejemplo de foto</label>
+                        <img src="templates/images.jpg" alt="Ejemplo de foto" class="example-photo" />
+                        <small>Formato recomendado: JPG, PNG</small>
+                    </div>
+
                 </div>
             </div>
 
             <div class="form-box">
-                <label for="phone"> Teléfono: <span class="error">*</span><br /></label>
+                <label for="phone">Teléfono: <span class="error">*</span></label>
                 <input type="tel" id="phone" name="phone" placeholder="00-0000000000" pattern="[0-9]{1,2}-[0-9]{5,13}"
-                    maxlength="15" required /><br /><br />
-                <small id="phoneHelp">Debe seguir el siguiente formato: extensión-número (ej:
-                    00-123456789)</small><br /><br />
+                    maxlength="15" required />
+                <small id="phoneHelp">Debe seguir el siguiente formato: extensión-número</small>
             </div>
 
             <div class="form-box">
-                <label for="correo"> Correo: <span class="error">*</span><br /></label>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@hotmail.com" required /><br /><br />
+                <label for="correo">Correo: <span class="error">*</span></label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@hotmail.com" required />
             </div>
 
             <div class="form-box">
-                <label for="domicilio">Domicilio: <span class="error">*</span><br /></label>
-                <textarea id="domicilio" name="domicilio" rows="3" cols="30" required></textarea><br /><br />
+                <label for="domicilio">Domicilio: <span class="error">*</span></label>
+                <textarea id="domicilio" name="domicilio" rows="3" required></textarea>
             </div>
 
             <div class="form-box">
-                <label for="list"> Listado <span class="error">*</span><br /> </label>
-                <input type="file" id="list" name="list" accept=".txt" required /><br /><br />
-                <small>Extensiones admitidas: .txt</small><br /><br />
+                <label for="list">Listado: <span class="error">*</span></label>
+                <input type="file" id="list" name="list" accept=".txt" required />
+                <small>Extensiones admitidas: .txt</small>
             </div>
 
             <div class="form-box">
-                <label for="excel">Archivo Excel <span class="error">*</span><br /></label>
-                <input type="file" id="excel" name="excel" accept=".xlsx, .csv" required /><br /><br />
-                <small>Extensiones admitidas: .csv, .xlsx</small><br /><br />
+                <label for="excel">Archivo Excel: <span class="error">*</span></label>
+                <input type="file" id="excel" name="excel" accept=".xlsx, .csv" required />
+                <small>Extensiones admitidas: .csv, .xlsx</small>
             </div>
 
-            <div class="col-12">
-                <div class="form-check">
-                    <label class="form-check-label" style="color:rgba(0, 0, 0, 1);" for="invalidCheck">
-                        Confirmas que la informacion es veraz y correcta.
-                        <span class="error">*</span>
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                    </label>
-                    <small style="color:rgba(0, 0, 0, 1);">Debes aceptar antes de finalizar</small>
-                </div>
+            <div class="form-box form-check">
+                <label class="form-check-label" for="invalidCheck">
+                    Confirmas que la información es veraz y correcta.
+                    <span class="error">*</span>
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                </label>
+                <small>Debes aceptar antes de finalizar</small>
             </div>
 
-            <div class="form-group">
-                <input type="submit" value="Registrar">
-                <input type="reset" value="Restablecer" id="btnReset">
+            <div class="form-buttons-container">
+                <input type="submit" value="Registrar" class="form-btn submit-btn">
+                <input type="reset" value="Restablecer" class="form-btn reset-btn" id="btnReset">
             </div>
         </form>
 
-        <div style="text-align: center; margin-top: 20px;">
+        <div class="navigation-links">
             <a href="students.php" class="btn-students">Volver a registros</a>
         </div>
     </div>
