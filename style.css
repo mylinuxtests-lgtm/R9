@@ -109,7 +109,8 @@
 
     .example-photo,
     .current-photo {
-        max-height: 150px;
+        width: 200px;
+        height: auto;
     }
 
     .form-buttons-container {
