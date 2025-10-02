@@ -144,24 +144,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-box">
-                <label for="sexo">Sexo: <span class="error">*</span></label>
+                <label for="sexo">Sexo: <span class="error">*</span><br /></label>
+                 <br />
+
                 <div class="radio-group">
                     <label class="radio-label">
                         <input type="radio" id="S1" name="sexo" value="Masculino" required />
-                        <span class="radio-text">Masculino</span>
-                    </label>
+                        <span class="radio-text">Masculino</span> </label> <br />
+
                     <label class="radio-label">
                         <input type="radio" id="S2" name="sexo" value="Femenino" />
-                        <span class="radio-text">Femenino</span>
-                    </label>
+                        <span class="radio-text">Femenino</span> </label> <br />
+
                     <label class="radio-label">
                         <input type="radio" id="S3" name="sexo" value="Otro" />
-                        <span class="radio-text">Otro</span>
-                    </label>
-                </div>
-                <label id="labelOtro" for="especifique" class="oculto">Especifique:</label>
-                <input type="text" class="oculto" id="especifique" name="especifique" />
-            </div>
+                        <span class="radio-text">Otro</span> </label> <br />
+                        <label id="labelOtro" for="especifique" class="oculto">Especifique:</label>
+                        <input type="text" class="oculto" id="especifique" name="especifique" />
+                    </div>
+                    </div>
 
             <div class="form-box">
                 <label for="age">Edad: <span class="error">*</span></label>
@@ -191,17 +192,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="form-box">
                 <label for="photo">Sube tu foto: <span class="error">*</span></label>
+                <div class="photo-upload">
+                    <input type="file" id="photo" name="photo" accept="image/*" required /> <br />
+                    <small>Formato recomendado: JPG, PNG</small><br />
+                    <small>Tamaño máximo: 5MB</small>
+                </div>
                 <div class="photo-container">
-                                        <div class="photo-upload">
-                        <input type="file" id="photo" name="photo" accept="image/*" required />
-                        <small>Tamaño máximo: 5MB</small>
-                    </div>
                     <div class="photo-example">
                         <label>Ejemplo de foto</label>
                         <img src="templates/images.jpg" alt="Ejemplo de foto" class="example-photo" />
-                        <small>Formato recomendado: JPG, PNG</small>
                     </div>
-
                 </div>
             </div>
 
