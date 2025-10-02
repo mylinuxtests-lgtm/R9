@@ -23,7 +23,8 @@
 
     .photo-upload,
     .photo-example {
-        width: 100%;
+        width: 200px;
+        height: auto;
         text-align: center;
     }
 
@@ -41,7 +42,6 @@
     .current-photo {
         width: 200px;
         height: auto;
-        max-height: 200px;
         object-fit: contain;
         display: block;
         margin: 10px auto;
@@ -170,11 +170,9 @@
     select,
     textarea {
         font-size: 16px;
-        /* Previene zoom en iOS */
         padding: 12px 8px;
     }
 
-    /* Radio buttons más grandes en móvil */
     .radio-label {
         padding: 12px 8px;
         margin: 8px 0;
