@@ -150,11 +150,11 @@ $especifique_valor = $student['especifique'] ?? "";
             <label for="photo">
                 Sube tu foto: <span class="error">*</span><br />
             </label>
+            <div class="photo-upload">
+                <input type="file" id="photo" name="photo" accept="image/*" /> <br />
+                <small>Tamaño máximo: 5MB</small>
+            </div>
             <div class="photo-container">
-                <div class="photo-upload">
-                    <input type="file" id="photo" name="photo" accept="image/*" />
-                    <small>Tamaño máximo: 5MB</small>
-                </div>
                 <div class="photo-example">
                     <small>Foto actual:</small><br />
                     <img src="<?php echo $student['foto']; ?>" alt="Foto actual" class="current-photo" />
@@ -200,7 +200,7 @@ $especifique_valor = $student['especifique'] ?? "";
                     <span class="error">*</span>
                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
                 </label>
-                <small style="color:rgba(0, 0, 0, 1);">Debes aceptar antes de finalizar de edtiar</small>
+                <small style="color:rgba(0, 0, 0, 1);">Debes aceptar antes de finalizar de editar</small>
             </div>
         </div>
 
@@ -209,11 +209,9 @@ $especifique_valor = $student['especifique'] ?? "";
             <input type="reset" value="Restablecer cambios" class="form-btn reset-btn" />
         </div>
         <div style="text-align: center; margin-top: 20px;">
-            <a href="students.php" class="form-group">Cancelar edición</a>
-
+            <a href="students.php" class="btn-students">Cancelar edición</a>
         </div>
     </form>
-    <br /><br />
 
     <script>
         const radioOtro = document.getElementById("S3");
