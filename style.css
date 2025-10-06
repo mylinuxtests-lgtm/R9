@@ -15,22 +15,24 @@ body {
 }
 
 .form-container {
-    max-width: 600px;
+    width: clamp(100px, 50vw, 600px);
     margin: 20px auto;
     padding: 20px;
     background-color: rgba(233, 224, 93, 0.973);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.959);
+    font-size: 20vm;
     text-align: center;
 }
 
 .form-box {
-    max-width: 600px;
+    width: clamp(100px, 50vw, 600px);
     margin: 10px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.829);
     border-radius: 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.973);
+    font-size: 20vm;
     text-align: justify;
 }
 
@@ -41,8 +43,11 @@ body {
 }
 
 .photo-container img {
-    width: 200px;          
-    height: auto;          
+    min-width: 50px;
+    max-width: 200px;          
+    height: auto;
+    aspect-ratio: 9 /16;
+    object-fit: contain;          
     border: 2px solid #ccc;
     border-radius: 5px;
     margin-top: 5px;
@@ -69,7 +74,7 @@ h2 {
 
 .form-check {
     color: #f0f0f0;
-    max-width: 600px;
+    width: clamp(100px, 50vw, 600px);
     margin: 10px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0);
@@ -112,8 +117,7 @@ label {
 input[type="submit"] {
     display: block;
     margin: 20px auto;
-    min-width: 150px;         
-    max-width: 90%;           
+    width: clamp(70px, 60vw, 150px);          
     padding: 10px 20px;       
     background-color: #0e4e08;
     color: #fff;
@@ -121,7 +125,7 @@ input[type="submit"] {
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(81, 184, 21, 0.8);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 16vm;
     text-align: center;
     white-space: normal;      
     word-wrap: break-word;    
@@ -134,8 +138,7 @@ input[type="submit"]:hover {
 input[type="reset"] {
     display: block;
     margin: 20px auto;
-    min-width: 150px;
-    max-width: 90%;
+    width: clamp(70px, 60vw, 150px);
     padding: 10px 20px;
     background-color: #9c0303;
     color: #fff;
@@ -143,7 +146,7 @@ input[type="reset"] {
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(196, 91, 91, 0.8);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 16vm;
     text-align: center;
     white-space: normal;
     word-wrap: break-word;
@@ -229,7 +232,7 @@ input[type="reset"]:hover {
 }
 
 .confirmation-container {
-    max-width: 500px;
+    width: clamp(100px, 50vw, 500px);
     margin: 50px auto;
     padding: 20px;
     background-color: white;
@@ -270,8 +273,7 @@ input[type="reset"]:hover {
 .btn-students {
     display: block;
     margin: 15px auto;
-    min-width: 150px;
-    max-width: 30%;
+    width: clamp(50px, 50vw, 150px);
     padding: 10px 20px;
     background-color: #680668;
     color: rgb(255, 255, 255);
