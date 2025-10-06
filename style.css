@@ -112,16 +112,19 @@ label {
 input[type="submit"] {
     display: block;
     margin: 20px auto;
-    width: 65%;
-    padding: 10px;
+    min-width: 150px;         
+    max-width: 90%;           
+    padding: 10px 20px;       
     background-color: #0e4e08;
-    color: rgb(255, 255, 255);
+    color: #fff;
     border: none;
     border-radius: 4px;
-    box-shadow: 0 0 10px #51b815(0, 0, 0, 1);
+    box-shadow: 0 0 10px rgba(81, 184, 21, 0.8);
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    white-space: normal;      
+    word-wrap: break-word;    
 }
 
 input[type="submit"]:hover {
@@ -131,16 +134,19 @@ input[type="submit"]:hover {
 input[type="reset"] {
     display: block;
     margin: 20px auto;
-    width: 65%;
-    padding: 10px;
+    min-width: 150px;
+    max-width: 90%;
+    padding: 10px 20px;
     background-color: #9c0303;
-    color: rgb(255, 255, 255);
+    color: #fff;
     border: none;
     border-radius: 4px;
-    box-shadow: 0 0 10px #c45b5b(0, 0, 0, 1);
+    box-shadow: 0 0 10px rgba(196, 91, 91, 0.8);
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 input[type="reset"]:hover {
@@ -263,9 +269,10 @@ input[type="reset"]:hover {
 
 .btn-students {
     display: block;
-    margin: 20px auto;
-    width: 50%;
-    padding: 10px;
+    margin: 15px auto;
+    min-width: 150px;
+    max-width: 30%;
+    padding: 10px 20px;
     background-color: #680668;
     color: rgb(255, 255, 255);
     border: none;
@@ -274,6 +281,8 @@ input[type="reset"]:hover {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
+    white-space: normal;    
+    word-wrap: break-word;
 }
 
 .btn:hover {
