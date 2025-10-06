@@ -64,6 +64,7 @@ $permiso_exportar = ($id_usuario == 1 || $id_usuario == 2);
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/locale/bootstrap-table-es-ES.min.js"></script>
   
   <script>
     // Configuración de la tabla con AJAX
@@ -208,7 +209,42 @@ function verDetalles(id) {
 
     // Event listeners
     $(document).ready(function() {
-      $('#studentsTable').bootstrapTable({ locale: 'es-ES' });
+      $('#studentsTable').bootstrapTable({
+        locale: 'es-ES',
+        formatLoadingMessage: function () {
+            return 'Cargando, por favor espere...';
+        },
+        formatRecordsPerPage: function (pageNumber) {
+            return pageNumber + ' registros por página';
+        },
+        formatShowingRows: function (pageFrom, pageTo, totalRows, totalNotFiltered) {
+            if (totalNotFiltered !== undefined && totalNotFiltered > 0 && totalNotFiltered > totalRows) {
+                return 'Mostrando ' + pageFrom + ' a ' + pageTo + ' de ' + totalRows + ' registros (filtrado de ' + totalNotFiltered + ' registros totales)';
+            }
+            return 'Mostrando ' + pageFrom + ' a ' + pageTo + ' de ' + totalRows + ' registros';
+        },
+        formatSearch: function () {
+            return 'Buscar';
+        },
+        formatNoMatches: function () {
+            return 'No se encontraron registros coincidentes';
+        },
+        formatPaginationSwitch: function () {
+            return 'Ocultar/Mostrar paginación';
+        },
+        formatRefresh: function () {
+            return 'Actualizar';
+        },
+        formatToggle: function () {
+            return 'Alternar';
+        },
+        formatColumns: function () {
+            return 'Columnas';
+        },
+        formatAllRows: function () {
+            return 'Todos';
+        }
+      });
 
       $('#refreshBtn').on('click', function() {
         $('#studentsTable').bootstrapTable('refresh');

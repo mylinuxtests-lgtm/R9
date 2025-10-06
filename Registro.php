@@ -243,14 +243,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <small>Debes aceptar antes de finalizar</small>
             </div>
 
+        </form>
             <div class="form-buttons-container">
                 <input type="submit" value="Registrar" class="form-btn submit-btn">
                 <input type="reset" value="Restablecer" class="form-btn reset-btn" id="btnReset">
-            </div>
-        </form>
-
-        <div class="navigation-links">
-            <a href="students.php" class="btn-students">Volver a registros</a>
+                
+                <div class="navigation-links">
+                    <a href="students.php" class="btn-students">Volver a registros</a>
+                </div>
         </div>
     </div>
 
