@@ -33,8 +33,10 @@ $permiso_exportar = ($id_usuario == 1 || $id_usuario == 2);
     <a href='Registro.php' class='new-student-btn'>Registrar nuevo estudiante</a>
     <?php if ($permiso_exportar): ?>
       <a href='gestion.php?export=all_csv' class='export-csv-btn'>Exportar a CSV</a>
+      <a href='estadisticas.php' class='stats-btn'>Ver Estadísticas</a>
     <?php endif; ?>
   </div>
+  
 
   <div class="container-fluid overflow-auto rounded-lg shadow">
     <div id="toolbar">
