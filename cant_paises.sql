@@ -1,1 +1,0 @@
-SELECT id_paises, COUNT(*) AS cant_paises FROM student GROUP BY id_paises;
