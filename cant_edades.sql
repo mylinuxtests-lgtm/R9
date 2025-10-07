@@ -1,1 +1,0 @@
-SELECT edad, COUNT(*) AS cant_edades FROM student GROUP BY edad;
