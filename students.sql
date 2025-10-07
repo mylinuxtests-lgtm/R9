@@ -108,11 +108,101 @@ CREATE TABLE `student` (
   KEY `id_sexo` (`id_sexo`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`id_paises`) REFERENCES `paises` (`id_paises`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `student_ibfk_2` FOREIGN KEY (`id_sexo`) REFERENCES `sexo` (`id_sexo`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 /*Data for the table `student` */
 
-insert  into `student`(`id_students`,`nombre`,`id_sexo`,`especifique`,`edad`,`nacimiento`,`id_paises`,`telefono`,`correo`,`domicilio`,`foto`,`lista`,`excel`,`fecha_acceso`,`fecha_registro`,`id_usuario_registro`,`fecha_edicion`,`id_usuario_editor`,`visible`,`fecha_borrado`,`id_usuario_borrador`) values (1,'Willie Houston',1,'',18,'2007-04-06',8,'81-6071555766','batz23@yahoo.com','5869 Isabel Travessa, Ponte de Sor, PA 8955','templates/images.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2018-04-11 08:10:57',NULL,'2025-09-19 13:28:11',101010,1,'2025-09-22 11:19:14',101010),(2,'Doris Powell',2,'',23,'2000-03-19',3,'1-5489028700','major.runte@yahoo.ca','Apt. 683 487 Jerome Port, Bernhardfort, WY 59789-4131','templates/ap2d.webp','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2022-11-22 15:05:12',NULL,NULL,NULL,1,'2025-09-22 11:29:29',101010),(3,'Milo Barrett',1,'',34,'1991-10-25',1,'49-1531045430','anton_rittweg63@gmail.com','Zimmer 620 Sonderburger Str. 1, Malikberg, BW 17608','templates/5560191.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2024-11-18 19:50:24',NULL,NULL,NULL,1,'2025-02-13 16:55:08',NULL),(4,'Benjamin Hurst',1,'',23,'2002-08-24',5,'1-3052556891','keegan.oreilly27@yahoo.com','Suite 917 6808 Annie Forest, Lake Shelachester, GA 56230','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2025-01-07 23:09:08',NULL,NULL,NULL,1,'2025-07-17 11:16:48',NULL),(5,'Caiden Chen',3,'she/they',17,'2008-04-15',2,'55-3593786163','sara.albuquerque@yahoo.com','Puerta 831 Salida Laura, 98, Paterna, Bal 19389','templates/nrucodkclyva.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2020-06-30 10:25:03',NULL,NULL,NULL,1,'2024-01-28 04:48:41',NULL),(6,'Caitlyn Holden',2,'',21,'2004-12-22',10,'7-9355293637','yurii63@hotmail.com','Apt. 590 al. Łukasik 970, Mława, PM 65-288','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2021-02-17 12:36:41',NULL,NULL,NULL,1,'2022-11-02 09:22:16',NULL),(7,'Kelvin Gardner',1,'',20,'2005-03-07',6,'91-7533871307','rym_aarf24@hotmail.com','480 Ferne Shores, Auermouth, KS 81250','templates/nrucodkclyva.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2019-07-20 20:15:24',NULL,NULL,NULL,1,'2020-07-10 06:08:55',NULL),(8,'Enya Nash',3,'they/them',17,'2008-07-09',7,'62-8764351921','darman.wastuti49@yahoo.com','Jl. Hayamwuruk No. 77, Intan Jaya, JW 41660','templates/ap2d.webp','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2023-03-01 14:06:09',NULL,NULL,NULL,1,'2024-06-06 12:56:00',NULL),(9,'Tina Chandler',2,'',31,'1994-01-10',4,'86-17405689715','yenrh_62@hotmail.com','62630 Peggie Port, Bartonberg, CO 43458-6975','templates/cute.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2021-10-18 05:00:55',NULL,NULL,NULL,1,'2023-03-13 05:16:43',NULL),(10,'Haroon Hudson',1,'',45,'1979-11-14',9,'52-4953941761','abraham60@nearbpo.com','Parque César 85 Esc. 828, Benalmádena, Ext 60878','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2020-05-29 11:49:00',NULL,NULL,NULL,1,'2022-10-09 07:36:49',NULL),(11,'Faizan Boone',2,'',20,'2005-05-23',9,'52-16294146737','mariana_gil90@gmail.com','3 OG Sandstr. 45c, Jeremiegrün, HE 50723','templates/cute.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2021-04-04 08:33:06',NULL,NULL,NULL,1,'2023-08-30 21:57:19',NULL),(12,'Eleni Wilkinson',3,'she/he',14,'2011-07-01',5,'1-3771516979','mae.von87@hotmail.com','Jl. Rasuna Said No. 65, Jakarta Barat, YO 72880','templates/5560191.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2017-12-27 18:12:21',NULL,NULL,NULL,1,'2018-03-09 10:40:52',NULL),(13,'Haseeb Richmond',1,'',18,'2007-08-14',6,'91-7477473348','shymaa_slah@gmail.com','Lote 43 2434 Carvalho Viela, Mangualde, MA 3117','templates/images.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2019-01-21 19:29:00',NULL,NULL,NULL,1,'2024-01-01 01:47:08',NULL),(14,'Penny Benjamin',2,'',16,'2009-03-06',10,'7-9926911701','mikhail.evdokimov@yandex.ru','al. Golec 173, Bytom Odrzański, PK 28-156','templates/ap2d.webp','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2025-05-20 15:59:17',NULL,NULL,NULL,1,'2025-09-05 14:32:42',NULL),(15,'Omari Lowe',3,'he/they',37,'1988-02-18',8,'81-8074983691','hassie52@hotmail.com','19056 Silas Drive, Rockyfurt, MD 41345','templates/nrucodkclyva.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2021-06-14 22:30:45',NULL,NULL,NULL,1,'2022-11-20 15:47:14',NULL),(16,'Nicholas Daniel',1,'',34,'1991-03-31',4,'86-18580687830','portjtg.17@gmail.com\r','al. Skalski 664, Zambrów, LS 95-860','templates/5560191.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2023-08-09 07:26:53',NULL,NULL,NULL,1,'2023-12-20 16:25:50',NULL),(17,'Kyley Parker',2,'',54,'1971-12-18',7,'62-8370296292','gaiman56@gmail.co.id','Jl. Gatot Soebroto No. 83, Cilacap, SA 63944','templates/cute.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2019-09-16 11:05:52',NULL,NULL,NULL,1,'2021-07-08 19:45:01',NULL),(18,'Jake Vasquez',1,'',21,'2004-06-22',3,'1-990989867','kiel49@gmail.com','2825 Wiza Port, Hilpertchester, CT 02715-8367','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2020-05-09 02:57:16',NULL,NULL,NULL,1,'2021-04-27 10:29:44',NULL),(19,'Lenny Holmes',3,'they/them',23,'2002-04-26',2,'55-5471014777','liz79@hotmail.com','Edificio Elisa 29 Esc. 358, Cuenta, Man 63032','templates/ap2d.webp','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2024-01-20 05:26:08',NULL,NULL,NULL,1,'2025-06-09 20:30:27',NULL),(20,'Victor Hayden',1,'',19,'2006-01-12',1,'49-13023754','talea33@hotmail.com','Graf-Galen-Platz 73, Bad Ninohagen, BB 46183','templates/5560191.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2022-10-19 16:36:11',NULL,'2025-09-18 10:48:18',101010,1,'2023-03-18 15:44:12',NULL),(57,'test',1,'',1,'2025-09-11',9,'52-1111111111','example@gmail.com','test','./uploads/foto_1757629969.jpg','uploads/lista_1757954405.txt','uploads/excel_1757629969.csv','2025-09-11 16:32:49','2025-09-11 16:32:49',101010,'2025-09-11 16:34:46',101010,0,'2025-09-22 13:23:02',101010),(58,'example',1,'',1,'2025-09-15',1,'49-798645312','example@hotmail.com','example','./uploads/foto_1758213595.jpg','uploads/lista_1757954405.txt','uploads/excel_1758213855.xlsx','2025-09-15 10:40:05','2025-09-15 10:40:05',101010,'2025-09-18 10:48:27',101010,1,'2025-09-22 13:21:20',101010),(59,'1',2,'',99,'2025-09-22',9,'52-5647865478','yufreghyufe@gmail.com','bfdvshjfsd','./uploads/foto_1758569034.jpg','./uploads/lista_1758569034.txt','./uploads/excel_1758569034.csv','2025-09-22 13:23:54','2025-09-22 13:23:54',101010,NULL,NULL,1,'2025-09-22 13:23:54',NULL);
+insert  into `student`(`id_students`,`nombre`,`id_sexo`,`especifique`,`edad`,`nacimiento`,`id_paises`,`telefono`,`correo`,`domicilio`,`foto`,`lista`,`excel`,`fecha_acceso`,`fecha_registro`,`id_usuario_registro`,`fecha_edicion`,`id_usuario_editor`,`visible`,`fecha_borrado`,`id_usuario_borrador`) values (1,'Willie Houston',1,'',18,'2007-04-06',8,'81-6071555766','batz23@yahoo.com','5869 Isabel Travessa, Ponte de Sor, PA 8955','templates/images.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2018-04-11 08:10:57',NULL,'2025-09-29 14:47:25',101010,1,'2025-10-02 14:17:47',101010),(2,'Doris Powell',2,'',23,'2000-03-19',3,'1-5489028700','major.runte@yahoo.ca','Apt. 683 487 Jerome Port, Bernhardfort, WY 59789-4131','templates/ap2d.webp','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2022-11-22 15:05:12',NULL,NULL,NULL,1,'2025-09-22 11:29:29',101010),(3,'Milo Barrett',1,'',34,'1991-10-25',1,'49-1531045430','anton_rittweg63@gmail.com','Zimmer 620 Sonderburger Str. 1, Malikberg, BW 17608','templates/5560191.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2024-11-18 19:50:24',NULL,NULL,NULL,1,'2025-02-13 16:55:08',NULL),(4,'Benjamin Hurst',1,'',23,'2002-08-24',5,'1-3052556891','keegan.oreilly27@yahoo.com','Suite 917 6808 Annie Forest, Lake Shelachester, GA 56230','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2025-01-07 23:09:08',NULL,NULL,NULL,1,'2025-07-17 11:16:48',NULL),(5,'Caiden Chen',3,'she/they',17,'2008-04-15',2,'55-3593786163','sara.albuquerque@yahoo.com','Puerta 831 Salida Laura, 98, Paterna, Bal 19389','templates/nrucodkclyva.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2020-06-30 10:25:03',NULL,NULL,NULL,1,'2024-01-28 04:48:41',NULL),(6,'Caitlyn Holden',2,'',21,'2004-12-22',10,'7-9355293637','yurii63@hotmail.com','Apt. 590 al. Łukasik 970, Mława, PM 65-288','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2021-02-17 12:36:41',NULL,NULL,NULL,1,'2022-11-02 09:22:16',NULL),(7,'Kelvin Gardner',1,'',20,'2005-03-07',6,'91-7533871307','rym_aarf24@hotmail.com','480 Ferne Shores, Auermouth, KS 81250','templates/nrucodkclyva.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2019-07-20 20:15:24',NULL,NULL,NULL,1,'2020-07-10 06:08:55',NULL),(8,'Enya Nash',3,'they/them',17,'2008-07-09',7,'62-8764351921','darman.wastuti49@yahoo.com','Jl. Hayamwuruk No. 77, Intan Jaya, JW 41660','templates/ap2d.webp','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2023-03-01 14:06:09',NULL,NULL,NULL,1,'2024-06-06 12:56:00',NULL),(9,'Tina Chandler',2,'',31,'1994-01-10',4,'86-17405689715','yenrh_62@hotmail.com','62630 Peggie Port, Bartonberg, CO 43458-6975','templates/cute.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2021-10-18 05:00:55',NULL,NULL,NULL,1,'2023-03-13 05:16:43',NULL),(10,'Haroon Hudson',1,'',45,'1979-11-14',9,'52-4953941761','abraham60@nearbpo.com','Parque César 85 Esc. 828, Benalmádena, Ext 60878','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2020-05-29 11:49:00',NULL,NULL,NULL,1,'2022-10-09 07:36:49',NULL),(11,'Faizan Boone',2,'',20,'2005-05-23',9,'52-16294146737','mariana_gil90@gmail.com','3 OG Sandstr. 45c, Jeremiegrün, HE 50723','templates/cute.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2021-04-04 08:33:06',NULL,NULL,NULL,1,'2023-08-30 21:57:19',NULL),(12,'Eleni Wilkinson',3,'she/he',14,'2011-07-01',5,'1-3771516979','mae.von87@hotmail.com','Jl. Rasuna Said No. 65, Jakarta Barat, YO 72880','templates/5560191.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2017-12-27 18:12:21',NULL,NULL,NULL,1,'2018-03-09 10:40:52',NULL),(13,'Haseeb Richmond',1,'',18,'2007-08-14',6,'91-7477473348','shymaa_slah@gmail.com','Lote 43 2434 Carvalho Viela, Mangualde, MA 3117','templates/images.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2019-01-21 19:29:00',NULL,NULL,NULL,1,'2024-01-01 01:47:08',NULL),(14,'Penny Benjamin',2,'',16,'2009-03-06',10,'7-9926911701','mikhail.evdokimov@yandex.ru','al. Golec 173, Bytom Odrzański, PK 28-156','templates/ap2d.webp','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2025-05-20 15:59:17',NULL,NULL,NULL,1,'2025-09-05 14:32:42',NULL),(15,'Omari Lowe',3,'he/they',37,'1988-02-18',8,'81-8074983691','hassie52@hotmail.com','19056 Silas Drive, Rockyfurt, MD 41345','templates/nrucodkclyva.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2021-06-14 22:30:45',NULL,NULL,NULL,1,'2022-11-20 15:47:14',NULL),(16,'Nicholas Daniel',1,'',34,'1991-03-31',4,'86-18580687830','portjtg.17@gmail.com\r','al. Skalski 664, Zambrów, LS 95-860','templates/5560191.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2023-08-09 07:26:53',NULL,NULL,NULL,1,'2023-12-20 16:25:50',NULL),(17,'Kyley Parker',2,'',54,'1971-12-18',7,'62-8370296292','gaiman56@gmail.co.id','Jl. Gatot Soebroto No. 83, Cilacap, SA 63944','templates/cute.jpg','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2019-09-16 11:05:52',NULL,NULL,NULL,1,'2021-07-08 19:45:01',NULL),(18,'Jake Vasquez',1,'',21,'2004-06-22',3,'1-990989867','kiel49@gmail.com','2825 Wiza Port, Hilpertchester, CT 02715-8367','templates/red-fox.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2020-05-09 02:57:16',NULL,NULL,NULL,1,'2021-04-27 10:29:44',NULL),(19,'Lenny Holmes',3,'they/them',23,'2002-04-26',2,'55-5471014777','liz79@hotmail.com','Edificio Elisa 29 Esc. 358, Cuenta, Man 63032','templates/ap2d.webp','templates/lista.txt','templates/lista.csv','0000-00-00 00:00:00','2024-01-20 05:26:08',NULL,NULL,NULL,1,'2025-06-09 20:30:27',NULL),(20,'Victor Hayden',1,'',19,'2006-01-12',1,'49-13023754','talea33@hotmail.com','Graf-Galen-Platz 73, Bad Ninohagen, BB 46183','templates/5560191.jpg','templates/compras.txt','templates/lista.xlsx','0000-00-00 00:00:00','2022-10-19 16:36:11',NULL,'2025-09-18 10:48:18',101010,1,'2023-03-18 15:44:12',NULL),(57,'test',1,'',1,'2025-09-11',9,'52-1111111111','example@gmail.com','test','./uploads/foto_1757629969.jpg','uploads/lista_1757954405.txt','uploads/excel_1757629969.csv','2025-09-11 16:32:49','2025-09-11 16:32:49',101010,'2025-09-11 16:34:46',101010,1,'2025-10-06 10:15:00',101010),(58,'example',1,'',1,'2025-09-15',1,'49-798645312','example@hotmail.com','example','./uploads/foto_1758213595.jpg','uploads/lista_1757954405.txt','uploads/excel_1758213855.xlsx','2025-09-15 10:40:05','2025-09-15 10:40:05',101010,'2025-09-18 10:48:27',101010,1,'2025-09-23 12:27:55',101010),(59,'1',2,'',99,'2025-09-22',9,'52-5647865478','yufreghyufe@gmail.com','bfdvshjfsd','./uploads/foto_1758569034.jpg','./uploads/lista_1758569034.txt','./uploads/excel_1758569034.csv','2025-09-22 13:23:54','2025-09-22 13:23:54',101010,NULL,NULL,1,'2025-10-01 13:57:19',101010),(60,'ada',2,'',22,'2025-09-10',1,'49-534678534','e@g','data','./uploads/foto_1758653313_68d2eb8144e5a.jpg','./uploads/lista_1758653313_68d2eb8144f9f.txt','./uploads/excel_1758653313_68d2eb814503b.csv','2025-09-23 12:48:33','2025-09-23 12:48:33',101010,'2025-09-23 12:49:14',101010,1,'2025-09-29 14:38:41',101010);
+
+/*Table structure for table `vw_estudiantes_correo` */
+
+DROP TABLE IF EXISTS `vw_estudiantes_correo`;
+
+/*!50001 DROP VIEW IF EXISTS `vw_estudiantes_correo` */;
+/*!50001 DROP TABLE IF EXISTS `vw_estudiantes_correo` */;
+
+/*!50001 CREATE TABLE  `vw_estudiantes_correo`(
+ `ID` int(11) ,
+ `Nombre` varchar(50) ,
+ `Sexo` varchar(20) ,
+ `Edad` int(3) ,
+ `Fecha_Nacimiento` date ,
+ `País` char(50) ,
+ `Teléfono` varchar(14) ,
+ `Correo` varchar(50) ,
+ `Domicilio` varchar(255) ,
+ `Foto` varchar(255) ,
+ `Lista` varchar(255) ,
+ `Excel` varchar(255) 
+)*/;
+
+/*Table structure for table `vw_estudiantes` */
+
+DROP TABLE IF EXISTS `vw_estudiantes`;
+
+/*!50001 DROP VIEW IF EXISTS `vw_estudiantes` */;
+/*!50001 DROP TABLE IF EXISTS `vw_estudiantes` */;
+
+/*!50001 CREATE TABLE  `vw_estudiantes`(
+ `ID` int(11) ,
+ `Nombre` varchar(50) ,
+ `Sexo` varchar(20) ,
+ `Especifique` varchar(255) ,
+ `Edad` int(3) ,
+ `Fecha_Nacimiento` date ,
+ `País` char(50) ,
+ `Teléfono` varchar(14) ,
+ `Correo` varchar(50) ,
+ `Domicilio` varchar(255) ,
+ `Foto` varchar(255) ,
+ `Lista` varchar(255) ,
+ `Excel` varchar(255) ,
+ `Fecha_Registro` timestamp ,
+ `Fecha_Edicion` timestamp 
+)*/;
+
+/*Table structure for table `vw_estudiantes_sexo` */
+
+DROP TABLE IF EXISTS `vw_estudiantes_sexo`;
+
+/*!50001 DROP VIEW IF EXISTS `vw_estudiantes_sexo` */;
+/*!50001 DROP TABLE IF EXISTS `vw_estudiantes_sexo` */;
+
+/*!50001 CREATE TABLE  `vw_estudiantes_sexo`(
+ `ID` int(11) ,
+ `Nombre` varchar(50) ,
+ `Sexo` varchar(20) ,
+ `Edad` int(3) ,
+ `Fecha_Nacimiento` date ,
+ `País` char(50) ,
+ `Teléfono` varchar(14) ,
+ `Correo` varchar(50) ,
+ `Domicilio` varchar(255) ,
+ `Foto` varchar(255) ,
+ `Lista` varchar(255) ,
+ `Excel` varchar(255) 
+)*/;
+
+/*View structure for view vw_estudiantes_correo */
+
+/*!50001 DROP TABLE IF EXISTS `vw_estudiantes_correo` */;
+/*!50001 DROP VIEW IF EXISTS `vw_estudiantes_correo` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `vw_estudiantes_correo` AS select `vw_estudiantes`.`ID` AS `ID`,`vw_estudiantes`.`Nombre` AS `Nombre`,`vw_estudiantes`.`Sexo` AS `Sexo`,`vw_estudiantes`.`Edad` AS `Edad`,`vw_estudiantes`.`Fecha_Nacimiento` AS `Fecha_Nacimiento`,`vw_estudiantes`.`País` AS `País`,`vw_estudiantes`.`Teléfono` AS `Teléfono`,`vw_estudiantes`.`Correo` AS `Correo`,`vw_estudiantes`.`Domicilio` AS `Domicilio`,`vw_estudiantes`.`Foto` AS `Foto`,`vw_estudiantes`.`Lista` AS `Lista`,`vw_estudiantes`.`Excel` AS `Excel` from `vw_estudiantes` where `vw_estudiantes`.`Correo` regexp '^[A-Za-z][A-Za-z0-9._%-]*@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$' and !(`vw_estudiantes`.`Correo` regexp '\\.[A-Za-z0-9._%-]*@') and `vw_estudiantes`.`Correo` <> '' and `vw_estudiantes`.`Correo` is not null order by `vw_estudiantes`.`Correo` */;
+
+/*View structure for view vw_estudiantes */
+
+/*!50001 DROP TABLE IF EXISTS `vw_estudiantes` */;
+/*!50001 DROP VIEW IF EXISTS `vw_estudiantes` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `vw_estudiantes` AS select `s`.`id_students` AS `ID`,`s`.`nombre` AS `Nombre`,`sex`.`descripcion` AS `Sexo`,`s`.`especifique` AS `Especifique`,`s`.`edad` AS `Edad`,`s`.`nacimiento` AS `Fecha_Nacimiento`,`p`.`pais` AS `País`,`s`.`telefono` AS `Teléfono`,`s`.`correo` AS `Correo`,`s`.`domicilio` AS `Domicilio`,`s`.`foto` AS `Foto`,`s`.`lista` AS `Lista`,`s`.`excel` AS `Excel`,`s`.`fecha_registro` AS `Fecha_Registro`,`s`.`fecha_edicion` AS `Fecha_Edicion` from ((`student` `s` join `sexo` `sex` on(`s`.`id_sexo` = `sex`.`id_sexo`)) join `paises` `p` on(`s`.`id_paises` = `p`.`id_paises`)) where `s`.`visible` = 1 */;
+
+/*View structure for view vw_estudiantes_sexo */
+
+/*!50001 DROP TABLE IF EXISTS `vw_estudiantes_sexo` */;
+/*!50001 DROP VIEW IF EXISTS `vw_estudiantes_sexo` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `vw_estudiantes_sexo` AS select `vw_estudiantes`.`ID` AS `ID`,`vw_estudiantes`.`Nombre` AS `Nombre`,`vw_estudiantes`.`Sexo` AS `Sexo`,`vw_estudiantes`.`Edad` AS `Edad`,`vw_estudiantes`.`Fecha_Nacimiento` AS `Fecha_Nacimiento`,`vw_estudiantes`.`País` AS `País`,`vw_estudiantes`.`Teléfono` AS `Teléfono`,`vw_estudiantes`.`Correo` AS `Correo`,`vw_estudiantes`.`Domicilio` AS `Domicilio`,`vw_estudiantes`.`Foto` AS `Foto`,`vw_estudiantes`.`Lista` AS `Lista`,`vw_estudiantes`.`Excel` AS `Excel` from `vw_estudiantes` where `vw_estudiantes`.`Sexo` = 'Femenino' */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
